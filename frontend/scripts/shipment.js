@@ -2,7 +2,7 @@
 const notifCountElem = document.getElementById("notification-count");
 console.log("Notification element:", notifCountElem);
 
-document.getElementById("submitShipment").addEventListener("click", function (event) {
+document.getElementById("submit").addEventListener("click", function (event) {
   event.preventDefault();
 
   const senderFname = document.getElementById("sender-Fname").value.trim();
