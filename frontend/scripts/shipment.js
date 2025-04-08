@@ -1,5 +1,6 @@
 // /ShipNGo/frontend/scripts/shipment.js
 const notifCountElem = document.getElementById("notification-count");
+const cartCountElem = document.getElementById("cart-count");
 console.log("Notification element:", notifCountElem);
 
 document.getElementById("submit").addEventListener("click", function (event) {
@@ -52,7 +53,9 @@ document.getElementById("submit").addEventListener("click", function (event) {
       // Parse the current count (if it's not a number, default to 0)
       const currentCount = parseInt(notifCountElem.innerText, 10) || 0;
       notifCountElem.innerText = currentCount + 1;
-
+      
+      const currentCartCount = parseInt(cartCountElem.innerText, 10) || 0;
+      cartCountElem.innerText = currentCartCount + 1;
     })
     .catch(error => {
       console.error("Error:", error);
